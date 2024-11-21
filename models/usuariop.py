@@ -15,6 +15,7 @@ class User(UserMixin):
     USERS = {
         "1": {"username": "admin", "password": "123", "es_admin": True},
         "2": {"username": "usuario", "password": "123", "es_admin": False},
+        "3": {"username": "usuario2", "password": "123", "es_admin": False},
     }
 
     @classmethod

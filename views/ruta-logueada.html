@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta logueada</title>
+</head>
+<body>
+    <h1>Bienvenido, {{ username }}</h1>
+    {% if current_user.es_admin %}
+        <h2>¡Eres administrador!</h2>
+        <p>Aquí puedes gestionar configuraciones especiales.</p>
+    {% else %}
+        <h2>Eres un usuario estándar.</h2>
+        <p>No tienes acceso a opciones de administrador.</p>
+    {% endif %}
+
+    <a href="{{ url_for('main.logout') }}">Cerrar Sesión</a>
+</body>
+</html>
